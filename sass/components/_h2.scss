@@ -1,9 +1,21 @@
 .what-we-do__heading,
 .team__heading,
 .our-customers__heading {
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.171945;
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .what-we-do__heading,
+  .team__heading,
+  .our-customers__heading {
+    font-size: 36px;
+    line-height: 1.171945;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
