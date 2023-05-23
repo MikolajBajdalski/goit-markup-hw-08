@@ -2,11 +2,22 @@
   background-color: $backgroundColor;
   &__flex {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 60px;
   }
   &__address {
     margin-top: 20px;
     & ul {
       list-style: none;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
     & a {
       line-height: 1.7;
@@ -23,9 +34,6 @@
     color: $lightText;
     list-style-type: none;
   }
-  &__right {
-    margin-left: 70px;
-  }
   &__join-to-us {
     font-weight: 700;
     font-size: 14px;
@@ -33,109 +41,156 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 20px;
+    text-align: center;
   }
   &__socialmedia-icons {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
     padding: 5px 0 20px 0;
+    gap: 10px;
+    margin-bottom: 60px;
   }
   &__socialmedia-icon {
     display: flex;
     align-content: center;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    transition: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    margin: 0 5px;
     & a {
       width: 44px;
       height: 44px;
-      &:focus {
-        background-color: $primaryColor;
-        cursor: pointer;
-        outline: none;
-        border-radius: 50%;
-        & svg {
-          fill: $white;
-        }
-      }
-    }
-    &:hover {
-      background-color: $primaryColor;
-      cursor: pointer;
-    }
-    & svg {
-      fill: $iconsColor;
-      padding: 11px;
-      transition: fill;
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      &:hover {
-        fill: $white;
-      }
-    }
-    &:first-child {
-      margin-left: 0;
-    }
-    &:last-child {
-      margin-right: 0;
     }
     & svg {
       fill: $white;
+      padding: 11px;
     }
-    &:hover {
+  }
+  .subscribe-newsletter {
+    max-width: 450px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &__heading {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    &__input-email-newsletter {
+      width: 100%;
+      height: 50px;
+      background-color: $backgroundColor;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+      border-radius: 4px;
+      font-size: 20px;
+      padding: 15px 16px;
+      color: $white;
+      &:focus-within {
+        outline: none;
+      }
+    }
+    &__newsletter-button {
+      padding: 10px 28px 10px 42px;
       background-color: $primaryColor;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      color: $white;
+      border: none;
+      height: 50px;
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.06em;
+      margin: 30px auto 0 auto;
     }
   }
 }
 
-.subscribe-newsletter {
-  margin-left: 78px;
-  &__heading {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
-  &__input-email-newsletter {
-    width: 358px;
-    height: 50px;
-    background-color: $backgroundColor;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    font-size: 20px;
-    padding: 15px 16px;
-    color: $white;
-    &:focus-within {
-      outline: none;
+@media screen and (min-width: 1200px) {
+  .footer {
+    &__flex {
+      flex-direction: row;
+    }
+    &__left {
+      align-items: flex-start;
+      margin-bottom: 0;
+    }
+    &__address {
+      & ul {
+        align-items: flex-start;
+      }
+    }
+    &__right {
+      margin-left: 70px;
+    }
+
+    &__socialmedia-icon {
+      transition: background-color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      margin: 0 5px;
+      & a {
+        &:focus {
+          background-color: $primaryColor;
+          cursor: pointer;
+          outline: none;
+          border-radius: 50%;
+          & svg {
+            fill: $white;
+          }
+        }
+      }
+      &:hover {
+        background-color: $primaryColor;
+        cursor: pointer;
+      }
+      & svg {
+        transition: fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover {
+          fill: $white;
+        }
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      & svg {
+        fill: $white;
+      }
+      &:hover {
+        background-color: $primaryColor;
+      }
     }
   }
-  &__newsletter-button {
-    padding: 10px 28px 10px 42px;
-    background-color: $primaryColor;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    color: $white;
-    border: none;
-    height: 50px;
-    font-size: 16px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    letter-spacing: 0.06em;
-    & img {
-      margin-left: 24px;
+
+  .subscribe-newsletter {
+    margin-left: 78px;
+    &__heading {
+      text-align: end;
     }
-  }
-  &__newsletter-form {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    &__input-email-newsletter {
+      width: 358px;
+    }
+    &__newsletter-button {
+      cursor: pointer;
+
+      & img {
+        margin-left: 24px;
+      }
+    }
+    &__newsletter-form {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
   }
 }
