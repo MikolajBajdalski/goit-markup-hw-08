@@ -1,0 +1,27 @@
+.lorem-ipsum {
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+  }
+  &__item {
+    width: 270px;
+    list-style: none;
+  }
+  &__svg {
+    background-color: #f5f4fa;
+    padding: 25px 102.34px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+  &__heading {
+    font-size: 14px;
+    line-height: 1.17214;
+    margin-bottom: 10px;
+  }
+  & p {
+    color: $lightText;
+    line-height: 1.715;
+    font-size: 14px;
+  }
+}

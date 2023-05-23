@@ -1,0 +1,24 @@
+.what-we-do {
+  &__grid {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+  }
+  &__item {
+    position: relative;
+    margin-bottom: 0;
+    display: flex;
+  }
+  &__title {
+    position: absolute;
+    bottom: 0;
+    background: $backgroundColor;
+    opacity: 80%;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,11 @@
+.header {
+  border-bottom: #ececec 1px solid;
+}
+.header__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}/*# sourceMappingURL=page-header.min.css.map */
