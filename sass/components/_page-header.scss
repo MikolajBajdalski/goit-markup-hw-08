@@ -1,86 +1,102 @@
 .header {
   border-bottom: #ececec 1px solid;
   & .container {
+    margin-left: 15px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-  }
-  &__left {
-    display: flex;
-    align-items: center;
-  }
-  &__right {
-    display: flex;
+    padding: 16px 0;
   }
 }
 
 .nav {
-  display: flex;
-  list-style-type: none;
-  width: 254px;
-  padding: 32px 0 0 0;
-  justify-content: space-between;
-  &__link {
-    text-decoration: none;
-    color: $primaryText;
-    transition: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover,
-    &:focus {
-      color: $primaryColor;
-    }
-    &--active::after {
-      content: "";
-      display: block;
-      border: 2px solid $primaryColor;
-      border-radius: 2px;
-      margin-top: 28px;
-    }
-  }
+  display: none;
 }
 
 .contact {
-  list-style-type: none;
-  display: flex;
-  &__item {
-    display: flex;
-    align-items: center;
-    & a {
-      text-decoration: none;
-      color: $lightText;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    & .container {
+      justify-content: space-between;
+    }
+    &__left {
       display: flex;
       align-items: center;
+    }
+    &__right {
+      display: flex;
+    }
+  }
+
+  .nav {
+    display: flex;
+    list-style-type: none;
+    width: 254px;
+    padding: 32px 0 0 0;
+    justify-content: space-between;
+    &__link {
+      text-decoration: none;
+      color: $primaryText;
       transition: color;
       transition-duration: 250ms;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    &:first-child {
-      margin-right: 20px;
-    }
-    & svg {
-      fill: $lightText;
-      margin: 0 10px;
-    }
-  }
-  &__icon {
-    & use {
-      transition: fill;
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover,
+      &:focus {
+        color: $primaryColor;
+      }
+      &--active::after {
+        content: "";
+        display: block;
+        border: 2px solid $primaryColor;
+        border-radius: 2px;
+        margin-top: 28px;
+      }
     }
   }
-  &__link {
-    &:hover .contact__icon use,
-    &:focus .contact__icon use {
-      fill: $primaryColor;
+
+  .contact {
+    list-style-type: none;
+    display: flex;
+    &__item {
+      display: flex;
+      align-items: center;
+      & a {
+        text-decoration: none;
+        color: $lightText;
+        display: flex;
+        align-items: center;
+        transition: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      &:first-child {
+        margin-right: 20px;
+      }
+      & svg {
+        fill: $lightText;
+        margin: 0 10px;
+      }
     }
-    &:hover,
-    &:focus {
-      color: $primaryColor;
+    &__icon {
+      & use {
+        transition: fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
     }
-    &:focus {
-      outline: none;
+    &__link {
+      &:hover .contact__icon use,
+      &:focus .contact__icon use {
+        fill: $primaryColor;
+      }
+      &:hover,
+      &:focus {
+        color: $primaryColor;
+      }
+      &:focus {
+        outline: none;
+      }
     }
   }
 }
