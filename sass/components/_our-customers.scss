@@ -1,26 +1,40 @@
 .customers {
   display: flex;
   list-style: none;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px 0;
   &__item {
     border: 1px solid $iconsColor;
     border-radius: 4px;
     display: flex;
     align-items: center;
-    transition: border;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover {
-      border: 1px solid $primaryColor;
-    }
+
     & svg {
       fill: $iconsColor;
       padding: 16px 32px;
-      transition: fill;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .customers {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    &__item {
+      transition: border;
       transition-duration: 250ms;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       &:hover {
-        fill: $primaryColor;
+        border: 1px solid $primaryColor;
+      }
+      & svg {
+        transition: fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover {
+          fill: $primaryColor;
+        }
       }
     }
   }
