@@ -107,6 +107,9 @@
       align-items: center;
       letter-spacing: 0.06em;
       margin: 30px auto 0 auto;
+      & img {
+        margin-left: 24px;
+      }
     }
   }
 }
@@ -182,10 +185,6 @@
     }
     &__newsletter-button {
       cursor: pointer;
-
-      & img {
-        margin-left: 24px;
-      }
     }
     &__newsletter-form {
       display: flex;

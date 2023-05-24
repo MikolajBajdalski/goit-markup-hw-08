@@ -5,6 +5,7 @@
 body {
   font-family: $primaryFontFamily;
   color: $primaryText;
+  min-width: 320px;
 }
 
 .container {

@@ -10,6 +10,9 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 16px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .nav {
@@ -154,6 +157,7 @@
 body {
   font-family: "Roboto", sans-serif;
   color: #212121;
+  min-width: 320px;
 }
 
 .container {
@@ -685,6 +689,9 @@ body {
   letter-spacing: 0.06em;
   margin: 30px auto 0 auto;
 }
+.footer .subscribe-newsletter__newsletter-button img {
+  margin-left: 24px;
+}
 
 @media screen and (min-width: 1200px) {
   .footer__flex {
@@ -764,9 +771,6 @@ body {
   .subscribe-newsletter__newsletter-button {
     cursor: pointer;
   }
-  .subscribe-newsletter__newsletter-button img {
-    margin-left: 24px;
-  }
   .subscribe-newsletter__newsletter-form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -804,7 +808,8 @@ body {
   left: 50%;
   top: 50%;
   background-color: #ffffff;
-  width: 528px;
+  max-width: 450px;
+  width: 100%;
   border-radius: 4px;
   opacity: 1;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -836,18 +841,17 @@ body {
   background-color: transparent;
   cursor: pointer;
 }
-
-.modal-form {
+.modal .modal-form {
   margin: 12px 40px 0 40px;
 }
-.modal-form__description-label {
+.modal .modal-form__description-label {
   display: block;
   margin-bottom: 4px;
   margin-top: 10px;
   color: #757575;
   font-size: 12px;
 }
-.modal-form__input {
+.modal .modal-form__input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   display: -webkit-box;
@@ -863,12 +867,12 @@ body {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form__input input {
+.modal .modal-form__input input {
   border: none;
   outline: none;
   width: 100%;
 }
-.modal-form__input label {
+.modal .modal-form__input label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -877,43 +881,43 @@ body {
           align-items: center;
   width: 100%;
 }
-.modal-form__input:focus-within {
+.modal .modal-form__input:focus-within {
   border: 1px solid #2196f3;
   fill: #2196f3;
 }
-.modal-form__textarea-comment {
+.modal .modal-form__textarea-comment {
   resize: none;
   width: 100%;
   border: none;
   outline: none;
   padding: 12px 16px;
 }
-.modal-form__textarea-comment::-webkit-input-placeholder {
+.modal .modal-form__textarea-comment::-webkit-input-placeholder {
   color: #757575;
   opacity: 50%;
   font-size: 12px;
 }
-.modal-form__textarea-comment::-moz-placeholder {
+.modal .modal-form__textarea-comment::-moz-placeholder {
   color: #757575;
   opacity: 50%;
   font-size: 12px;
 }
-.modal-form__textarea-comment:-ms-input-placeholder {
+.modal .modal-form__textarea-comment:-ms-input-placeholder {
   color: #757575;
   opacity: 50%;
   font-size: 12px;
 }
-.modal-form__textarea-comment::-ms-input-placeholder {
+.modal .modal-form__textarea-comment::-ms-input-placeholder {
   color: #757575;
   opacity: 50%;
   font-size: 12px;
 }
-.modal-form__textarea-comment::placeholder {
+.modal .modal-form__textarea-comment::placeholder {
   color: #757575;
   opacity: 50%;
   font-size: 12px;
 }
-.modal-form__accept-the-terms {
+.modal .modal-form__accept-the-terms {
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -925,7 +929,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.modal-form__statute {
+.modal .modal-form__statute {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -937,14 +941,14 @@ body {
           justify-content: center;
   position: relative;
 }
-.modal-form__statute p {
+.modal .modal-form__statute p {
   font-size: 14px;
   margin-left: 25px;
 }
-.modal-form__statute p a {
+.modal .modal-form__statute p a {
   color: #2196f3;
 }
-.modal-form__send-button-container {
+.modal .modal-form__send-button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -952,7 +956,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.modal-form__send-button {
+.modal .modal-form__send-button {
   margin-top: 30px;
   margin-bottom: 40px;
   padding: 10px 76px;
@@ -968,25 +972,25 @@ body {
   letter-spacing: 0.06em;
   cursor: pointer;
 }
-.modal-form__checkbox {
+.modal .modal-form__checkbox {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
-.modal-form__checkbox:checked + .modal-form__checkbox-checkmark {
+.modal .modal-form__checkbox:checked + .modal-form__checkbox-checkmark {
   display: block;
 }
-.modal-form__checkbox:checked + .modal-form__checkbox-border {
+.modal .modal-form__checkbox:checked + .modal-form__checkbox-border {
   background-color: #2196f3;
   fill: #2196f3;
 }
-.modal-form__checkbox-border {
+.modal .modal-form__checkbox-border {
   border-radius: 2px;
   position: absolute;
   top: 0;
   left: 0;
 }
-.modal-form__checkbox-checkmark {
+.modal .modal-form__checkbox-checkmark {
   position: absolute;
   top: 3px;
   left: 2px;
@@ -997,7 +1001,7 @@ body {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form__name-svg {
+.modal .modal-form__name-svg {
   margin: 14px 15px;
 }
 
@@ -1122,4 +1126,129 @@ body {
 .portfolio__filtr {
   color: #757575;
   line-height: 1.875;
+}
+
+.mobile-menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  background-color: #ffffff;
+  min-width: 320px;
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.mobile-menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.js-close-menu {
+  width: 40px;
+  height: 40px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background-color: #ffffff;
+  border: none;
+  margin-top: 10px;
+}
+
+.js-open-menu {
+  background-color: #ffffff;
+  border: none;
+  margin-right: 15px;
+}
+
+.mobile-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+}
+
+.mobile-menu-pages li {
+  list-style: none;
+  margin-bottom: 32px;
+}
+.mobile-menu-pages__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 40px;
+  color: black;
+}
+.mobile-menu-pages__link--is-active {
+  color: #2196f3;
+}
+
+.mobile-menu-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.mobile-menu-contact__link {
+  list-style: none;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+.mobile-menu-contact__link a {
+  text-decoration: none;
+}
+.mobile-menu-contact__link--phone {
+  font-size: 34px;
+  color: #2196f3;
+}
+.mobile-menu-contact__link--mail {
+  font-size: 24px;
+  color: #757575;
+}
+
+.mobile-menu-socialmedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 48px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.mobile-menu-socialmedia__link {
+  list-style: none;
+  padding: 0 10px;
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+}
+.mobile-menu-socialmedia__link:first-child {
+  padding-left: 0;
+  border: none;
+}
+.mobile-menu-socialmedia__link a {
+  text-decoration: none;
+  color: #2196f3;
+  font-size: 18px;
+  font-weight: 500;
 }/*# sourceMappingURL=main.min.css.map */
