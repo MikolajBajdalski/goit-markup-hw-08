@@ -327,6 +327,9 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+  .what-we-do {
+    display: block;
+  }
   .what-we-do__grid {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -456,6 +459,9 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    max-width: 1150px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
   .team img {
     width: 270px;
@@ -598,6 +604,9 @@ body {
   .customers__item svg:hover {
     fill: #2196f3;
   }
+  .customers svg {
+    width: 170px;
+  }
 }
 .footer {
   background-color: #2f303a;
@@ -676,7 +685,6 @@ body {
   list-style: none;
   padding: 5px 0 20px 0;
   gap: 10px;
-  margin-bottom: 60px;
 }
 .footer__socialmedia-icon {
   display: -webkit-box;
@@ -686,6 +694,7 @@ body {
       align-content: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  margin-bottom: 72px;
 }
 .footer__socialmedia-icon a {
   width: 44px;
@@ -744,14 +753,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 24px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   letter-spacing: 0.06em;
-  margin: 30px auto 0 auto;
-}
-.footer .subscribe-newsletter__newsletter-button img {
-  margin-left: 24px;
+  margin: 20px auto 0 auto;
+  max-width: 210px;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -773,6 +782,11 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
   .footer__left {
     -webkit-box-align: start;
@@ -787,6 +801,9 @@ body {
   }
   .footer__right {
     margin-left: 70px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .footer__socialmedia-icon {
     -webkit-transition: background-color;
@@ -833,14 +850,20 @@ body {
   .footer__socialmedia-icon:hover {
     background-color: #2196f3;
   }
+  .footer__join-to-us {
+    text-align: start;
+  }
+  .footer .subscribe-newsletter__heading {
+    text-align: start;
+  }
+  .footer .subscribe-newsletter__newsletter-button {
+    margin: 0;
+  }
   .subscribe-newsletter {
     margin-left: 78px;
   }
-  .subscribe-newsletter__heading {
-    text-align: end;
-  }
   .subscribe-newsletter__input-email-newsletter {
-    width: 358px;
+    min-width: 280px;
   }
   .subscribe-newsletter__newsletter-button {
     cursor: pointer;
@@ -1079,6 +1102,12 @@ body {
   margin: 14px 15px;
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 530px;
+    width: 100%;
+  }
+}
 .portfolio {
   padding-top: 94px;
 }

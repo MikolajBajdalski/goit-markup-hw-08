@@ -66,6 +66,8 @@
     &__employ-card {
       flex-direction: row;
       justify-content: space-between;
+      max-width: 1150px;
+      flex-wrap: nowrap;
     }
     & img {
       width: 270px;

@@ -49,13 +49,13 @@
     list-style: none;
     padding: 5px 0 20px 0;
     gap: 10px;
-    margin-bottom: 60px;
   }
   &__socialmedia-icon {
     display: flex;
     align-content: center;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    margin-bottom: 72px;
     & a {
       width: 44px;
       height: 44px;
@@ -104,12 +104,12 @@
       font-size: 16px;
       font-weight: 700;
       display: flex;
+      gap: 24px;
       align-items: center;
       letter-spacing: 0.06em;
-      margin: 30px auto 0 auto;
-      & img {
-        margin-left: 24px;
-      }
+      margin: 20px auto 0 auto;
+      max-width: 210px;
+      width: 100%;
     }
   }
 }
@@ -128,6 +128,8 @@
   .footer {
     &__flex {
       flex-direction: row;
+      align-items: center;
+      flex-wrap: nowrap;
     }
     &__left {
       align-items: flex-start;
@@ -140,6 +142,7 @@
     }
     &__right {
       margin-left: 70px;
+      align-items: center;
     }
 
     &__socialmedia-icon {
@@ -183,15 +186,24 @@
         background-color: $primaryColor;
       }
     }
+    &__join-to-us {
+      text-align: start;
+    }
+    .subscribe-newsletter {
+      &__heading {
+        text-align: start;
+      }
+      &__newsletter-button {
+        margin: 0;
+      }
+    }
   }
 
   .subscribe-newsletter {
     margin-left: 78px;
-    &__heading {
-      text-align: end;
-    }
+
     &__input-email-newsletter {
-      width: 358px;
+      min-width: 280px;
     }
     &__newsletter-button {
       cursor: pointer;

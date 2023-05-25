@@ -4,6 +4,7 @@
 
 @media screen and (min-width: 1200px) {
   .what-we-do {
+    display: block;
     &__grid {
       display: flex;
       list-style: none;
