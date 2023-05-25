@@ -108,3 +108,14 @@
     }
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .header {
+    & .container {
+      justify-content: space-around;
+    }
+  }
+  .contact {
+    flex-direction: row;
+  }
+}
