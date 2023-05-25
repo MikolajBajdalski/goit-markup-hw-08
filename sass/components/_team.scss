@@ -44,6 +44,23 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .team {
+    &__employ-card {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      max-width: 800px;
+      width: 100%;
+      gap: 30px;
+    }
+    & figure {
+      max-width: 354px;
+      margin: 0;
+    }
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .team {
     &__employ-card {

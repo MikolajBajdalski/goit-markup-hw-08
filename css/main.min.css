@@ -425,6 +425,25 @@ body {
   padding: 11px;
 }
 
+@media screen and (min-width: 768px) {
+  .team__employ-card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    max-width: 800px;
+    width: 100%;
+    gap: 30px;
+  }
+  .team figure {
+    max-width: 354px;
+    margin: 0;
+  }
+}
 @media screen and (min-width: 1200px) {
   .team__employ-card {
     -webkit-box-orient: horizontal;
@@ -537,6 +556,15 @@ body {
   padding: 16px 32px;
 }
 
+@media screen and (min-width: 768px) {
+  .customers {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .customers svg {
+    width: 226px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .customers {
     -webkit-box-pack: justify;
