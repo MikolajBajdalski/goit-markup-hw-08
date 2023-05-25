@@ -283,6 +283,24 @@ body {
   text-align: start;
 }
 
+@media screen and (min-width: 768px) {
+  .lorem-ipsum__grid {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 95vw;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .lorem-ipsum__item {
+    max-width: 45%;
+    text-align: start;
+  }
+}
 @media screen and (min-width: 1200px) {
   .lorem-ipsum__grid {
     -webkit-box-pack: justify;
@@ -1267,6 +1285,9 @@ body {
 
 @media screen and (min-width: 768px) {
   .js-open-menu {
+    display: none;
+  }
+  .mobile-menu-container {
     display: none;
   }
 }/*# sourceMappingURL=main.min.css.map */
