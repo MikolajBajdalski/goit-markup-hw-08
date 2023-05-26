@@ -13,6 +13,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  max-width: 95%;
 }
 
 .nav {
@@ -61,6 +62,8 @@
   }
   .nav__link {
     text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
     color: #212121;
     -webkit-transition: color;
     transition: color;
@@ -101,6 +104,8 @@
   .contact__item a {
     margin-bottom: 10px 0;
     text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
     color: #757575;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -142,14 +147,29 @@
 }
 @media screen and (min-width: 1200px) {
   .header .container {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 10px;
+    width: 95vw;
+  }
+  .header__left {
+    margin-left: 50px;
+  }
+  .nav {
+    width: 40vw;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    gap: 0 46px;
   }
   .contact {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin-left: auto;
+    white-space: nowrap;
   }
 }
 .logo {
@@ -167,10 +187,9 @@
   color: #2196f3;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .logo {
     font-size: 26px;
-    margin-right: 93px;
   }
 }
 * {
@@ -185,8 +204,20 @@ body {
 }
 
 .container {
-  max-width: 767px;
+  max-width: 480px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 15px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .section {
@@ -242,6 +273,7 @@ body {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.875;
+  border: none;
 }
 
 @media screen and (min-width: 1200px) {
@@ -471,6 +503,7 @@ body {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    padding: 16px 0 30px 0;
   }
   .team__socialmedia-icon {
     border-radius: 50%;
@@ -638,6 +671,7 @@ body {
 }
 .footer__address {
   margin-top: 20px;
+  font-style: normal;
 }
 .footer__address ul {
   list-style: none;
@@ -761,6 +795,7 @@ body {
   margin: 20px auto 0 auto;
   max-width: 210px;
   width: 100%;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 768px) {

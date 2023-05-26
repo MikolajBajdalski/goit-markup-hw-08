@@ -6,6 +6,7 @@
     align-items: center;
     padding: 16px 0;
     justify-content: space-between;
+    max-width: 95%;
   }
 }
 
@@ -42,6 +43,8 @@
     justify-content: space-between;
     &__link {
       text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
       color: $primaryText;
       transition: color;
       transition-duration: 250ms;
@@ -71,6 +74,8 @@
       & a {
         margin-bottom: 10px 0;
         text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
         color: $lightText;
         display: flex;
         align-items: center;
@@ -112,10 +117,22 @@
 @media screen and (min-width: 1200px) {
   .header {
     & .container {
-      justify-content: space-around;
+      justify-content: space-between;
+      gap: 10px;
+      width: 95vw;
     }
+    &__left {
+      margin-left: 50px;
+    }
+  }
+  .nav {
+    width: 40vw;
+    justify-content: start;
+    gap: 0 46px;
   }
   .contact {
     flex-direction: row;
+    margin-left: auto;
+    white-space: nowrap;
   }
 }
