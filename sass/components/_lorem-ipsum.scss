@@ -34,9 +34,9 @@
 @media screen and (min-width: 768px) {
   .lorem-ipsum {
     &__grid {
-      justify-content: space-between;
+      justify-content: center;
       flex-direction: row;
-      max-width: 95vw;
+      gap: 30px;
       flex-wrap: wrap;
     }
     &__item {
