@@ -14,6 +14,7 @@
   &__address {
     margin-top: 20px;
     font-style: normal;
+    font-size: 14px;
     & ul {
       list-style: none;
       display: flex;
@@ -46,17 +47,16 @@
   }
   &__socialmedia-icons {
     display: flex;
-    justify-content: space-evenly;
     list-style: none;
-    padding: 5px 0 20px 0;
     gap: 10px;
+    margin-bottom: 60px;
   }
   &__socialmedia-icon {
     display: flex;
     align-content: center;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    margin-bottom: 72px;
+
     & a {
       width: 44px;
       height: 44px;
@@ -151,7 +151,6 @@
       transition: background-color;
       transition-duration: 250ms;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      margin: 0 5px;
       & a {
         &:focus {
           background-color: $primaryColor;

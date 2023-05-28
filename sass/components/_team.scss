@@ -33,6 +33,7 @@
     justify-content: center;
     list-style: none;
     padding: 5px 0 20px 0;
+    gap: 10px;
   }
   &__socialmedia-icon {
     display: flex;
@@ -74,7 +75,6 @@
       height: 260px;
     }
     &__socialmedia-icons {
-      justify-content: space-evenly;
       padding: 16px 0 30px 0;
     }
     &__socialmedia-icon {
