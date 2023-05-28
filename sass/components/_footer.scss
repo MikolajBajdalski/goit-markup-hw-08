@@ -4,12 +4,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 60px;
   }
   &__left {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 60px;
   }
   &__address {
     margin-top: 20px;
@@ -49,7 +49,6 @@
     display: flex;
     list-style: none;
     gap: 10px;
-    margin-bottom: 60px;
   }
   &__socialmedia-icon {
     display: flex;
@@ -122,6 +121,10 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-evenly;
+      align-items: flex-start;
+    }
+    &__socialmedia-icons {
+      margin-bottom: 0px;
     }
   }
 }
